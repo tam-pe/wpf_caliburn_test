@@ -1,0 +1,61 @@
+[{
+	"FirstName": "Aleksandr",
+	"LastName": "Kashkevich",
+	"DateofBirth": "2017-02-26T00:00:00+03:00",
+	"PathToPhoto": "Aleksandr.Kashkevich.jpg"
+}, {
+	"FirstName": "Alexei",
+	"LastName": "Zhukov",
+	"DateofBirth": "2017-02-26T00:00:00+03:00",
+	"PathToPhoto": "Alexei.Zhukov.jpg"
+}, {
+	"FirstName": "Alexey",
+	"LastName": "Gridiushko",
+	"DateofBirth": "2017-02-26T00:00:00+03:00",
+	"PathToPhoto": "Alexey.Gridiushko.jpg"
+}, {
+	"FirstName": "Andrei",
+	"LastName": "Peniaz",
+	"DateofBirth": "2017-02-26T00:00:00+03:00",
+	"PathToPhoto": "Andrei.Peniaz.jpg"
+}, {
+	"FirstName": "Ekaterina",
+	"LastName": "Varvashenia",
+	"DateofBirth": "2017-02-26T00:00:00+03:00",
+	"PathToPhoto": "Ekaterina.Varvashenia.jpg"
+}, {
+	"FirstName": "Eugene",
+	"LastName": "Zhukov",
+	"DateofBirth": "2017-02-26T00:00:00+03:00",
+	"PathToPhoto": "Eugene.Zhukov.jpg"
+}, {
+	"FirstName": "Igor",
+	"LastName": "Kalnik",
+	"DateofBirth": "2017-02-26T00:00:00+03:00",
+	"PathToPhoto": "Igor.Kalnik.jpg"
+}, {
+	"FirstName": "Kanstantsin",
+	"LastName": "Chernik",
+	"DateofBirth": "2017-02-26T00:00:00+03:00",
+	"PathToPhoto": "Kanstantsin.Chernik.jpg"
+}, {
+	"FirstName": "Nikita",
+	"LastName": "Сhipchai",
+	"DateofBirth": "2017-02-26T00:00:00+03:00",
+	"PathToPhoto": "Nikita.Сhipchai.jpg"
+}, {
+	"FirstName": "Oleg",
+	"LastName": "Zaitsev",
+	"DateofBirth": "2017-02-26T00:00:00+03:00",
+	"PathToPhoto": "Oleg.Zaitsev.jpg"
+}, {
+	"FirstName": "Pavel",
+	"LastName": "Kozlov",
+	"DateofBirth": "2017-02-26T00:00:00+03:00",
+	"PathToPhoto": "Pavel.Kozlov.jpg"
+}, {
+	"FirstName": "Yury",
+	"LastName": "Murenko",
+	"DateofBirth": "2017-02-26T00:00:00+03:00",
+	"PathToPhoto": "Yury.Murenko.jpg"
+}]

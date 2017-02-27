@@ -36,7 +36,7 @@ namespace WpfTraining.Service
         #region Private method
         string GetPathToUserJson()
         {
-            var dir = Path.Combine(Path.GetDirectoryName(Assembly.GetEntryAssembly().Location), "data");
+            var dir = Constants.PathToUserJsonFolder;
             if (!Directory.Exists(dir))
             {
                 Directory.CreateDirectory(dir);

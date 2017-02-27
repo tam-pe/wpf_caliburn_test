@@ -74,6 +74,7 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="AppBootstrapper.cs" />
+    <Compile Include="Constants.cs" />
     <Compile Include="DependencyInjection\Context.cs" />
     <Compile Include="Model\User.cs" />
     <Compile Include="Service\DataManager.cs" />
@@ -81,6 +82,7 @@
     <Compile Include="Service\Interface\INavigator.cs" />
     <Compile Include="Service\Interface\IUserManager.cs" />
     <Compile Include="Service\UserManager.cs" />
+    <Compile Include="Utils\PhotoSourceLocator.cs" />
     <Compile Include="ViewModel\Base\ViewModelBase.cs" />
     <Compile Include="ViewModel\MainViewModel.cs" />
     <Compile Include="ViewModel\ShellViewModel.cs" />
@@ -152,6 +154,9 @@
     <Resource Include="empty_photo.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>echo D| xcopy "$(ProjectDir)app_data\*.*" "$(TargetDir)app_data\"  /E /Y /S</PostBuildEvent>
+  </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

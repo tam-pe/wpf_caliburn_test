@@ -1,14 +1,42 @@
 <UserControl x:Class="WpfTraining.View.MainView"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             Width="440" Height="290"
+             MinWidth="440" MinHeight="290"
              xmlns:res="clr-namespace:WpfTraining.Properties">
     <Grid>
-        <TextBlock Text="{x:Static res:Resources.user_list}" Margin="31,20,208,181" ></TextBlock>
-        <ScrollViewer BorderBrush="Black" BorderThickness="1" Margin="31,50,218,15"/>
-        <Image x:Name="___WpfTraining_component_empty_photo_png" Width="80" Height="67" Margin="303,50,57,173" Source="/WpfTraining;component/empty_photo.png" Stretch="Fill"/>
-        <Button x:Name="AddUser" Content="{x:Static res:Resources.add}" Margin="294,134,49,134"/>
-        <Button x:Name="EditUser" Content="{x:Static res:Resources.edit}" Margin="294,172,49,92"/>
-        <Button x:Name="RemoveRemove" Content="{x:Static res:Resources.remove}" Margin="294,215,49,53"/>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" MinWidth="220"/>
+            <ColumnDefinition Width="*" MinWidth="220"/>
+        </Grid.ColumnDefinitions>
+        <Grid Grid.Column="0" Margin="5">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <TextBlock Grid.Row="0" Text="{x:Static res:Resources.user_list}" Margin="5,5,0,0"></TextBlock>
+            <Border Grid.Row="1" HorizontalAlignment="Stretch">
+                <Grid>
+                    <ListBox Name="AllUsers" SelectedItem="{Binding SelectedUser}" SelectionMode="Single" SelectedIndex="-1" Background="White" HorizontalAlignment="Stretch">
+                        <ListBox.ItemTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Text="{Binding FirstName}" Margin="5,0"/>
+                                    <TextBlock Text="{Binding LastName}"/>
+                                </StackPanel>
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
+                    </ListBox>
+                </Grid>
+            </Border>
+        </Grid>
+        <StackPanel Grid.Column="1" VerticalAlignment="Center" Orientation="Vertical" Margin="5">
+            <Image x:Name="PhotoPreview" MaxHeight="100" Margin="25"/>
+            <Button x:Name="AddUser" Content="{x:Static res:Resources.add}" Width="180" Margin="10"/>
+            <Button x:Name="EditUser" Content="{x:Static res:Resources.edit}"  Width="180" Margin="10,0,10,0"/>
+            <Button x:Name="Remove" Content="{x:Static res:Resources.remove}"  Width="180" Margin="10"/>
+        </StackPanel>
     </Grid>
 </UserControl>

@@ -2,8 +2,10 @@
 // http://www.softeq.com
 
 using System;
+using System.Collections.ObjectModel;
 using WpfTraining.Model;
 using WpfTraining.Service.Interface;
+using WpfTraining.Utils;
 using WpfTraining.ViewModel.Base;
 
 namespace WpfTraining.ViewModel
@@ -12,42 +14,63 @@ namespace WpfTraining.ViewModel
     {
         #region Variables
         private readonly IUserManager _userManager;
+        ObservableCollection<User> _allUsers;
+        User _selectedUser;
+        #endregion
+
+        #region Properties
+        public ObservableCollection<User> AllUsers
+        {
+            get { return _allUsers; }
+            set
+            {
+                _allUsers = value;
+                NotifyOfPropertyChange(() => this.AllUsers);
+            }
+        }
+
+        public User SelectedUser
+        {
+            get { return _selectedUser; }
+            set
+            {
+                _selectedUser = value;
+                NotifyOfPropertyChange(() =>this.SelectedUser);
+                NotifyOfPropertyChange(() =>this.PhotoPreview);
+                NotifyOfPropertyChange(() =>this.CanEditUser);
+                NotifyOfPropertyChange(() =>this.CanRemove);
+            }
+        }
+
+        public string PhotoPreview => PhotoSourceLocator.GetPhotoPath(this.SelectedUser?.PathToPhoto);
+        public bool CanEditUser => this.SelectedUser != null;
+        public bool CanRemove => this.SelectedUser != null;
+
         #endregion
 
         public MainViewModel(INavigator navigator, IUserManager userManager) : base(navigator)
         {
             _userManager = userManager;
+            this.AllUsers = _userManager.AllUsers;
         }
 
         public void Personal()
         {
-            _navigator.NavigateTo<UserDetailsViewModel>();
         }
 
         public void AddUser()
         {
-            for (int i = 0; i < 5; i++)
-            {
-                var us = new User()
-                {
-                    FirstName = "aasd",
-                    LasName = "f111",
-                    DateofBirth = DateTime.Today,
-                    PathToPhoto = String.Empty
-                };
-                _userManager.AllUsers.Add(us);
-            }
-            _userManager.Save();
+           
         }
 
         public void EditUser()
         {
-               
+            _navigator.NavigateTo<UserDetailsViewModel>();
         }
 
-        public void RemoveRemove()
+        public void Remove()
         {
-            
+            this.AllUsers.Remove(this.SelectedUser);
         }
     }
 }

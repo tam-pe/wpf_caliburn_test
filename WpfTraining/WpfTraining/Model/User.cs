@@ -8,7 +8,7 @@ namespace WpfTraining.Model
     internal class User
     {
         public string FirstName { get; set; }
-        public string LasName { get; set; }
+        public string LastName { get; set; }
         public DateTime DateofBirth { get; set; }
         public string PathToPhoto { get; set; }
     }
