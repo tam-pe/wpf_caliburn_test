@@ -1,7 +1,11 @@
-﻿// Caliburn.micro training developed for  Softeq Development Corporation
+// Caliburn.micro training developed for  Softeq Development Corporation
 // http://www.softeq.com
 
+using System;
 using System.Collections.Generic;
+using System.IO;
+using System.Reflection;
+using Newtonsoft.Json;
 using WpfTraining.Model;
 using WpfTraining.Service.Interface;
 
@@ -12,12 +16,32 @@ namespace WpfTraining.Service
         #region Implementation of IDataManager
         public IEnumerable<User> LoadUsers()
         {
-            throw new System.NotImplementedException();
+            IEnumerable<User> result  = new List<User>();
+            var pathToFile = GetPathToUserJson();
+            if (File.Exists(pathToFile))
+            {
+                result = JsonConvert.DeserializeObject<IEnumerable<User>>(File.ReadAllText(pathToFile));
+            }
+            return result;
         }
 
         public void SaveUsers(IEnumerable<User> users)
         {
-            throw new System.NotImplementedException();
+            var json = JsonConvert.SerializeObject(users);
+            var pathToFile = GetPathToUserJson();
+            File.WriteAllText(pathToFile, json);
+        }
+        #endregion
+
+        #region Private method
+        string GetPathToUserJson()
+        {
+            var dir = Path.Combine(Path.GetDirectoryName(Assembly.GetEntryAssembly().Location), "data");
+            if (!Directory.Exists(dir))
+            {
+                Directory.CreateDirectory(dir);
+            }
+            return Path.Combine(dir,"user.json");
         }
         #endregion
     }

@@ -61,16 +61,34 @@ namespace WpfTraining.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to asdasd.
+        ///   Looks up a localized string similar to Add.
         /// </summary>
-        public static string asd {
+        public static string add {
             get {
-                return ResourceManager.GetString("asd", resourceCulture);
+                return ResourceManager.GetString("add", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to User List.
+        ///   Looks up a localized string similar to Edit.
+        /// </summary>
+        public static string edit {
+            get {
+                return ResourceManager.GetString("edit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Remove.
+        /// </summary>
+        public static string remove {
+            get {
+                return ResourceManager.GetString("remove", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Users List.
         /// </summary>
         public static string user_list {
             get {

@@ -2,6 +2,7 @@
 // http://www.softeq.com
 
 using Ninject;
+using WpfTraining.Service;
 using WpfTraining.Service.Interface;
 
 namespace WpfTraining.DependencyInjection
@@ -14,6 +15,8 @@ namespace WpfTraining.DependencyInjection
         {
             kernel = new StandardKernel();
             kernel.Bind<INavigator>().ToConstant(navigator).InSingletonScope();
+            kernel.Bind<IDataManager>().To<DataManager>();
+            kernel.Bind<IUserManager>().To<UserManager>().InSingletonScope();
         }
 
         public T Create<T>()
