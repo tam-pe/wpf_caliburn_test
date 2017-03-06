@@ -50,11 +50,6 @@ namespace WpfTraining.ViewModel
         #endregion
 
         #region Public method
-        public void GoToMain()
-        {
-            _navigator.NavigateTo<MainViewModel>();
-        }
-
         public void SelectPhoto()
         {
             var openFileDialog = new OpenFileDialog
