@@ -7,14 +7,23 @@ namespace WpfTraining.Utils
 {
     internal static class PhotoSourceLocator
     {
-        public static string GetPhotoPath(string photoName)
+        public static string GetPhotoPath(string path)
         {
             var pathToPhoto = string.Empty;
-            if (photoName != null)
+            if (path != null)
             {
-                pathToPhoto = Path.Combine(Constants.PathToPhotoFolder, photoName);
+                if (File.Exists(path))
+                {
+                    return path;
+                }
+                pathToPhoto = Path.Combine(Constants.GetPathToPhotoFolder(), path);
             }
             return File.Exists(pathToPhoto) ? pathToPhoto : "/WpfTraining;component/empty_photo.png";
+        }
+
+        public static void AddNewPhoto(string photoPath)
+        {
+            
         }
     }
 }

@@ -10,6 +10,8 @@ namespace WpfTraining.Service.Interface
     {
         ObservableCollection<User> AllUsers { get; set; }
         User CurrentSelectedUser { get; set; }
+        void AddUser(User user);
+        void EditUser(User user);
         void Save();
     }
 }

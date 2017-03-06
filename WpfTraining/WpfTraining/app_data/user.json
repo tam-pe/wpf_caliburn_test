@@ -2,60 +2,60 @@
 	"FirstName": "Aleksandr",
 	"LastName": "Kashkevich",
 	"DateofBirth": "2017-02-26T00:00:00+03:00",
-	"PathToPhoto": "Aleksandr.Kashkevich.jpg"
+	"PhotoName": "Aleksandr.Kashkevich.jpg"
 }, {
 	"FirstName": "Alexei",
 	"LastName": "Zhukov",
 	"DateofBirth": "2017-02-26T00:00:00+03:00",
-	"PathToPhoto": "Alexei.Zhukov.jpg"
+	"PhotoName": "Alexei.Zhukov.jpg"
 }, {
 	"FirstName": "Alexey",
 	"LastName": "Gridiushko",
 	"DateofBirth": "2017-02-26T00:00:00+03:00",
-	"PathToPhoto": "Alexey.Gridiushko.jpg"
+	"PhotoName": "Alexey.Gridiushko.jpg"
 }, {
 	"FirstName": "Andrei",
 	"LastName": "Peniaz",
 	"DateofBirth": "2017-02-26T00:00:00+03:00",
-	"PathToPhoto": "Andrei.Peniaz.jpg"
+	"PhotoName": "Andrei.Peniaz.jpg"
 }, {
 	"FirstName": "Ekaterina",
 	"LastName": "Varvashenia",
 	"DateofBirth": "2017-02-26T00:00:00+03:00",
-	"PathToPhoto": "Ekaterina.Varvashenia.jpg"
+	"PhotoName": "Ekaterina.Varvashenia.jpg"
 }, {
 	"FirstName": "Eugene",
 	"LastName": "Zhukov",
 	"DateofBirth": "2017-02-26T00:00:00+03:00",
-	"PathToPhoto": "Eugene.Zhukov.jpg"
+	"PhotoName": "Eugene.Zhukov.jpg"
 }, {
 	"FirstName": "Igor",
 	"LastName": "Kalnik",
 	"DateofBirth": "2017-02-26T00:00:00+03:00",
-	"PathToPhoto": "Igor.Kalnik.jpg"
+	"PhotoName": "Igor.Kalnik.jpg"
 }, {
 	"FirstName": "Kanstantsin",
 	"LastName": "Chernik",
 	"DateofBirth": "2017-02-26T00:00:00+03:00",
-	"PathToPhoto": "Kanstantsin.Chernik.jpg"
+	"PhotoName": "Kanstantsin.Chernik.jpg"
 }, {
 	"FirstName": "Nikita",
 	"LastName": "Сhipchai",
 	"DateofBirth": "2017-02-26T00:00:00+03:00",
-	"PathToPhoto": "Nikita.Сhipchai.jpg"
+	"PhotoName": "Nikita.Сhipchai.jpg"
 }, {
 	"FirstName": "Oleg",
 	"LastName": "Zaitsev",
 	"DateofBirth": "2017-02-26T00:00:00+03:00",
-	"PathToPhoto": "Oleg.Zaitsev.jpg"
+	"PhotoName": "Oleg.Zaitsev.jpg"
 }, {
 	"FirstName": "Pavel",
 	"LastName": "Kozlov",
 	"DateofBirth": "2017-02-26T00:00:00+03:00",
-	"PathToPhoto": "Pavel.Kozlov.jpg"
+	"PhotoName": "Pavel.Kozlov.jpg"
 }, {
 	"FirstName": "Yury",
 	"LastName": "Murenko",
 	"DateofBirth": "2017-02-26T00:00:00+03:00",
-	"PathToPhoto": "Yury.Murenko.jpg"
+	"PhotoName": "Yury.Murenko.jpg"
 }]

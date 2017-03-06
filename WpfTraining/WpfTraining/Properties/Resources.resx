@@ -120,11 +120,32 @@
   <data name="add" xml:space="preserve">
     <value>Add</value>
   </data>
+  <data name="cancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="dob" xml:space="preserve">
+    <value>Date of birth</value>
+  </data>
   <data name="edit" xml:space="preserve">
     <value>Edit</value>
   </data>
+  <data name="first_name" xml:space="preserve">
+    <value>First Name</value>
+  </data>
+  <data name="last_name" xml:space="preserve">
+    <value>Last Name</value>
+  </data>
+  <data name="photo" xml:space="preserve">
+    <value>Photo</value>
+  </data>
   <data name="remove" xml:space="preserve">
     <value>Remove</value>
+  </data>
+  <data name="Save" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="select" xml:space="preserve">
+    <value>Select</value>
   </data>
   <data name="user_list" xml:space="preserve">
     <value>Users List</value>

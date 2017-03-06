@@ -4,7 +4,6 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Reflection;
 using Newtonsoft.Json;
 using WpfTraining.Model;
 using WpfTraining.Service.Interface;
@@ -36,12 +35,8 @@ namespace WpfTraining.Service
         #region Private method
         string GetPathToUserJson()
         {
-            var dir = Constants.PathToUserJsonFolder;
-            if (!Directory.Exists(dir))
-            {
-                Directory.CreateDirectory(dir);
-            }
-            return Path.Combine(dir,"user.json");
+            var dir = Constants.GetPathToUserJsonFolder();
+            return Path.Combine(dir, "User.json");
         }
         #endregion
     }

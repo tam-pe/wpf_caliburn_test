@@ -13,7 +13,7 @@ namespace WpfTraining.ViewModel
     internal class MainViewModel : ViewModelBase
     {
         #region Variables
-        private readonly IUserManager _userManager;
+        readonly IUserManager _userManager;
         ObservableCollection<User> _allUsers;
         User _selectedUser;
         #endregion
@@ -29,6 +29,7 @@ namespace WpfTraining.ViewModel
             }
         }
 
+
         public User SelectedUser
         {
             get { return _selectedUser; }
@@ -42,7 +43,7 @@ namespace WpfTraining.ViewModel
             }
         }
 
-        public string PhotoPreview => PhotoSourceLocator.GetPhotoPath(this.SelectedUser?.PathToPhoto);
+        public string PhotoPreview => PhotoSourceLocator.GetPhotoPath(this.SelectedUser?.PhotoName);
         public bool CanEditUser => this.SelectedUser != null;
         public bool CanRemove => this.SelectedUser != null;
 
@@ -54,23 +55,22 @@ namespace WpfTraining.ViewModel
             this.AllUsers = _userManager.AllUsers;
         }
 
-        public void Personal()
-        {
-        }
-
         public void AddUser()
         {
-           
+            _userManager.CurrentSelectedUser = null;
+            _navigator.NavigateTo<UserDetailsViewModel>();
         }
 
         public void EditUser()
         {
+            _userManager.CurrentSelectedUser = this.SelectedUser;
             _navigator.NavigateTo<UserDetailsViewModel>();
         }
 
         public void Remove()
         {
             this.AllUsers.Remove(this.SelectedUser);
+            _userManager.Save();
         }
     }
 }

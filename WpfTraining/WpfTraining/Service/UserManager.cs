@@ -28,6 +28,20 @@ namespace WpfTraining.Service
         #endregion
 
         #region Public method
+
+        public void AddUser(User user)
+        {
+            this.AllUsers.Add(user);
+            Save();
+        }
+
+        public void EditUser(User user)
+        {
+            this.AllUsers[this.AllUsers.IndexOf(this.CurrentSelectedUser)] = user;
+            _dataManager.SaveUsers(this.AllUsers);
+            Save();
+        }
+
         public void Save()
         {
             _dataManager.SaveUsers(this.AllUsers);
